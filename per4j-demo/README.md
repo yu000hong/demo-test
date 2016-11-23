@@ -97,3 +97,5 @@ public void profiledExample(String tagSuffix) {
 ### References
 
 - [Performance Analysis and Monitoring with Perf4J](https://www.infoq.com/articles/perf4j)
+
+- [Perf4J GitHub](https://github.com/perf4j/perf4j)
