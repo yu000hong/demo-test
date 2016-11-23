@@ -1,0 +1,39 @@
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+
+group 'com.github.yu000hong'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+
+sourceSets {
+    main {
+        java { srcDirs = [] }
+        groovy { srcDirs = ['src/main/java', 'src/main/groovy'] }
+    }
+    test {
+        java { srcDirs = [] }
+        groovy { srcDirs = ['src/test/java', 'src/test/groovy'] }
+    }
+}
+
+dependencies {
+    compile group: 'org.perf4j', name: 'perf4j', version: '0.9.16'
+
+    //testng
+    testCompile group: 'org.testng', name: 'testng', version: '6.9.13.6'
+}
+
+
+
+
+test {
+    useTestNG()
+}
